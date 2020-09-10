@@ -1,0 +1,17 @@
+server:
+  port: 8100
+spring:
+  redis:
+    host: 119.45.40.164
+    password: hxzy
+    port: 6379
+  data:
+    solr:
+      host: http://129.211.184.69:8983/solr/hxzy
+logging:
+  file:
+    name: search.log
+  level:
+    com.hxzy: debug
+swagger:
+  enable: true

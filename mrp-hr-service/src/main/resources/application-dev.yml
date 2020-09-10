@@ -1,0 +1,42 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mrp2?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filters: stat,wall,log4j2
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+        session-stat-enable: true
+        session-stat-max-count: 1000
+      stat-view-servlet:   # servlet配置，启用页面
+        enabled: true
+        url-pattern: /druid/*
+        reset-enable: false
+        login-password: admin8888
+        login-username: admin
+  mail:
+    host: smtp.qq.com
+    username: 1145254870@qq.com
+    password: rrnyqnqrqcgpbaga
+    port: 587
+  redis:
+    host: 119.45.40.164
+    password: hxzy
+    port: 6379
+  data:
+    solr:
+      host: http://129.211.184.69:8983/solr/hxzy
+logging:
+  file:
+    name: hr.log
+  level:
+    com.hxzy: debug
+swagger:
+  enable: true

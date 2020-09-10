@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>激活账户</title>
+</head>
+<body>
+<h3>XX管理平台帐户</h3>
+<h1> 验证你的电子邮件地址</h1>
+<h4>要完成此帐户的设置，我们只需确保这是你的电子邮件地址。</h4>
+<h4>
+    <a  style="text-decoration:none;color:white;background-color: #2672ec;padding-top: 5px;padding-right: 20px;padding-bottom: 5px;padding-left: 20px;min-width: 50px;"
+        href="http://localhost:8082/hr/email/verify?sn=${key}&mn=${mail}">
+        验证 ${mail}
+    </a>
+</h4>
+<h4>此链接的有效期为2天，请在2天之内进行激活。</h4>
+<h4>
+    <a  style="text-decoration:none;color:white;background-color: #3eec5c;padding-top: 5px;padding-right: 20px;padding-bottom: 5px;padding-left: 20px;min-width: 50px;"
+        href="http://localhost:8082/hr/email/resend?sn=${key}&mn=${mail}">
+        链接失败，重新发送邮件
+    </a>
+</h4>
+<h4>如果你没有提出此请求，请忽略此邮件。</h4>
+<h4>谢谢!</h4>
+
+</body>
+</html>
